@@ -7,15 +7,20 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+body {
+  color: var(--background);
+  background: var(--foreground);
+}
+
+@layer utilities{
+  .boxed{
+    @apply mx-auto max-w-7xl w-full
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components{
+  .buttom {
+    @apply bg-blue-500 text-white;
+    @apply px-4 py-2 rounded
+  }
 }
